@@ -6,7 +6,7 @@ Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configur
 
 A API tem um total de 4 endpoints, sendo em volta principalmente do usuário que pode cadastrar as linguas que conhece e as experiências de trabalho.
 
-O url base da API é http://localhost:3001
+O url base da API é https://activity-kenzie-json-server.herokuapp.com
 
 ### Cadastro
 
