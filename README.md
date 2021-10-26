@@ -65,7 +65,7 @@ POST /languages - FORMATO DA RESPOSTA - STATUS 201
 "id": 3
 }
 
-Listando Languages _Não Precisa de Autenticação_
+Listando Languages - _Não Precisa de Autenticação_
 
 GET /languages - FORMATO DA RESPOSTA - STATUS 200
 
@@ -109,7 +109,7 @@ POST /experience - FORMATO DA RESPOSTA - STATUS 201
 "id": 2
 }
 
-Listando Experiences _Precisa de Autenticação_
+Listando Experiences - _Precisa de Autenticação_
 
 GET /experience - FORMATO DA RESPOSTA - STATUS 200
 
