@@ -1,24 +1,129 @@
 # json-server-base
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Capstones do Q2.
+Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configuradO, usado no desenvolvimento da API da Atividade - JSON-Server do início ao Deploy.
 
 ## Endpoints
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+A API tem um total de 4 endpoints, sendo em volta principalmente do usuário que pode cadastrar as linguas que conhece e as experiências de trabalho.
+
+O url base da API é http://localhost:3001
 
 ### Cadastro
 
-POST /register <br/>
-POST /signup <br/>
-POST /users
+POST /users - FORMATO DA REQUISIÇÃO
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+{
+"email": "kenzinha@mail.com",
+"password": "123456",
+"name": "Kenzinha",
+"age": 20
+}
 
+POST /users - FORMATO DA RESPOSTA - STATUS 201
+
+"user": {
+"email": "kenzinha@mail.com",
+"name": "Kenzinha",
+"age": 20,
+"id": 3
+}
 
 ### Login
 
-POST /login <br/>
-POST /signin
+POST /login - FORMATO DA REQUISIÇÃO
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+{
+"email": "kenzinho@mail.com",
+"password": "123456"
+}
+
+POST /login - FORMATO DA RESPOSTA - STATUS 200
+
+"user": {
+"email": "kenzinho@mail.com",
+"name": "Kenzinho",
+"age": 38,
+"id": 1
+}
+
+### Languages
+
+POST /languages - FORMATO DA REQUISIÇÃO
+
+{
+"language": "portuguese",
+"level": "fluent",
+"userId" : 1
+}
+
+POST /languages - FORMATO DA RESPOSTA - STATUS 201
+
+{
+"language": "portuguese",
+"level": "fluent",
+"userId": 1,
+"id": 3
+}
+
+Listando Languages _Não Precisa de Autenticação_
+
+GET /languages - FORMATO DA RESPOSTA - STATUS 200
+
+[
+{
+"language": "english",
+"level": "intermediate",
+"userId": 1,
+"id": 1
+},
+{
+"language": "german",
+"level": "basic",
+"userId": 1,
+"id": 2
+},
+{
+"language": "portuguese",
+"level": "fluent",
+"userId": 1,
+"id": 3
+}
+]
+
+### Experience
+
+POST /experience - FORMATO DA REQUISIÇÃO
+
+{
+"company": "Innovation",
+"occupation": "Full stack developer",
+"userId" : 1
+}
+
+POST /experience - FORMATO DA RESPOSTA - STATUS 201
+
+{
+"company": "Innovation",
+"occupation": "Full stack developer",
+"userId": 1,
+"id": 2
+}
+
+Listando Experiences _Precisa de Autenticação_
+
+GET /experience - FORMATO DA RESPOSTA - STATUS 200
+
+[
+{
+"company": "Tech",
+"occupation": "Back-end developer",
+"userId": 1,
+"id": 1
+},
+{
+"company": "Innovation",
+"occupation": "Full stack developer",
+"userId": 1,
+"id": 2
+}
+]

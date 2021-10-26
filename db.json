@@ -6,6 +6,54 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "manoela@mail.com",
+      "password": "$2a$10$d/h9MwjTXnQahCLZxQkXnuH8kN7W.uCUqhoB0pqxd6gIn4Wt3jsHG",
+      "name": "Manoela",
+      "age": 31,
+      "id": 2
+    },
+    {
+      "email": "kenzinha@mail.com",
+      "password": "$2a$10$pe/rx6cFvguFeVsME3Y2Sen.RMNTZTwjSIIRlTIHsxvDmR5BOfj4.",
+      "name": "Kenzinha",
+      "age": 20,
+      "id": 3
+    }
+  ],
+  "languages": [
+    {
+      "language": "english",
+      "level": "intermediate",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "language": "german",
+      "level": "basic",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "language": "portuguese",
+      "level": "fluent",
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "experience": [
+    {
+      "company": "Tech",
+      "occupation": "Back-end developer",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "company": "Innovation",
+      "occupation": "Full stack developer",
+      "userId": 1,
+      "id": 2
     }
   ]
 }
